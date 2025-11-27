@@ -3,6 +3,7 @@ import LocationCard from './components/LocationCard';
 import FilterBar from './components/FilterBar';
 import BottomNav from './components/BottomNav';
 import SourcePage from './components/SourcePage';
+import MapView from './components/MapView';
 
 // Helper function to find coordinates for a location using partial matching
 function findLocationCoordinates(locationName, coordinatesMap) {
@@ -77,6 +78,7 @@ function parseNotificationText(text) {
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [viewMode, setViewMode] = useState('list'); // 'list' or 'map'
   const [locations, setLocations] = useState([]);
   const [filteredLocations, setFilteredLocations] = useState([]);
   const [statusFilter, setStatusFilter] = useState(['‼️ 急需 Urgent', '⚠️ 尚需 Still Need']);
@@ -364,26 +366,40 @@ function App() {
           sortByDistance={sortByDistance}
           onSortByDistanceChange={setSortByDistance}
           userLocation={userLocation}
+          viewMode={viewMode}
+          onViewModeChange={setViewMode}
         />
 
-        {filteredLocations.length === 0 ? (
-          <div className="text-center py-12 bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-200/50">
-            <div className="text-5xl mb-3">🔍</div>
-            <p className="text-lg font-medium text-gray-600">找不到符合條件的地點</p>
-            <p className="text-sm text-gray-500 mt-2">請嘗試調整篩選條件</p>
+        {viewMode === 'map' ? (
+          <div className="h-[calc(100vh-300px)] min-h-[500px] bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+            <MapView
+              locations={filteredLocations}
+              locationCoordinates={locationCoordinates}
+              statusFilter={statusFilter}
+            />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredLocations.map((location, index) => (
-              <LocationCard 
-                key={index} 
-                location={location} 
-                statusFilter={statusFilter}
-                coordinates={findLocationCoordinates(location.name, locationCoordinates)}
-                distance={location.distance}
-              />
-            ))}
-          </div>
+          <>
+            {filteredLocations.length === 0 ? (
+              <div className="text-center py-12 bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-200/50">
+                <div className="text-5xl mb-3">🔍</div>
+                <p className="text-lg font-medium text-gray-600">找不到符合條件的地點</p>
+                <p className="text-sm text-gray-500 mt-2">請嘗試調整篩選條件</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filteredLocations.map((location, index) => (
+                  <LocationCard 
+                    key={index} 
+                    location={location} 
+                    statusFilter={statusFilter}
+                    coordinates={findLocationCoordinates(location.name, locationCoordinates)}
+                    distance={location.distance}
+                  />
+                ))}
+              </div>
+            )}
+          </>
         )}
       </main>
 

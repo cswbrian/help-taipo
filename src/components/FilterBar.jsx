@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilter, onItemFilterChange, categoriesWithItems, sortByDistance, onSortByDistanceChange, userLocation }) {
+export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilter, onItemFilterChange, categoriesWithItems, sortByDistance, onSortByDistanceChange, userLocation, viewMode, onViewModeChange }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
   
   const statusOptions = [
@@ -189,6 +189,37 @@ export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilt
           <p className="text-xs text-gray-500 italic">未選擇任何狀態 - 顯示所有地點</p>
         )}
       </div>
+      
+      {/* View Mode Toggle */}
+      {viewMode && onViewModeChange && (
+        <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="flex items-center justify-between">
+            <label className="text-sm font-medium text-gray-700">檢視模式</label>
+            <div className="flex gap-2">
+              <button
+                onClick={() => onViewModeChange('list')}
+                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+                  viewMode === 'list'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                📋 列表
+              </button>
+              <button
+                onClick={() => onViewModeChange('map')}
+                className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
+                  viewMode === 'map'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                🗺️ 地圖
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
