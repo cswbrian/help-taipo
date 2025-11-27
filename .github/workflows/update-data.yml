@@ -1,0 +1,50 @@
+name: Update Data and Deploy
+
+on:
+  schedule:
+    # Run every 5 minutes (GitHub's minimum interval)
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch Google Sheets data
+        id: fetch-data
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/1W8A40TCVAY5prHNyVk-TqdSv2EumkVvN9l7LoUrY8-w/export?format=csv&gid=0" -o sheet.csv
+          
+      - name: Parse CSV and generate JSON
+        run: |
+          node scripts/parse-sheet.js
+
+      - name: Build React app
+        env:
+          GITHUB_PAGES: 'true'
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+

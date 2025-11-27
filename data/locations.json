@@ -1,0 +1,18 @@
+{
+  "lastUpdate": "2024-01-01T00:00:00.000Z",
+  "locations": [
+    {
+      "name": "彩虹串燒",
+      "allItems": "暫停接收物資（現場提供）",
+      "supplies": ["✅ 充足 Enough", "⚠️ 尚需 Still Need", "⚠️ 尚需 Still Need", "⚠️ 尚需 Still Need", "‼️ 急需 Urgent", "‼️ 急需 Urgent", "⚠️ 尚需 Still Need", "⚠️ 尚需 Still Need", "⚠️ 尚需 Still Need"],
+      "volunteers": ["⚠️ 尚需 Still Need"]
+    },
+    {
+      "name": "大埔藝術中心",
+      "allItems": "暫停接收物資（現場提供）",
+      "supplies": ["⚠️ 尚需 Still Need"],
+      "volunteers": ["🤨 無資料 No Data"]
+    }
+  ]
+}
+
