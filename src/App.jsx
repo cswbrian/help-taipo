@@ -4,6 +4,45 @@ import FilterBar from './components/FilterBar';
 import BottomNav from './components/BottomNav';
 import SourcePage from './components/SourcePage';
 
+// Helper function to convert text with URLs to clickable links
+function parseNotificationText(text) {
+  if (!text) return null;
+  
+  // URL regex pattern - matches http, https, and www URLs
+  const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/gi;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = urlRegex.exec(text)) !== null) {
+    // Add text before the URL
+    if (match.index > lastIndex) {
+      parts.push({ type: 'text', content: text.substring(lastIndex, match.index) });
+    }
+    
+    // Add the URL as a link
+    let url = match[0];
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      url = 'https://' + url;
+    }
+    
+    parts.push({ type: 'link', content: match[0], url: url });
+    lastIndex = match.index + match[0].length;
+  }
+  
+  // Add remaining text after the last URL
+  if (lastIndex < text.length) {
+    parts.push({ type: 'text', content: text.substring(lastIndex) });
+  }
+  
+  // If no URLs found, return the original text
+  if (parts.length === 0) {
+    return [{ type: 'text', content: text }];
+  }
+  
+  return parts;
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [locations, setLocations] = useState([]);
@@ -172,10 +211,31 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-start gap-3">
               <span className="text-2xl shrink-0">📢</span>
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-800 whitespace-pre-line leading-relaxed">
-                  {notification}
-                </p>
+              <div className="flex-1 min-w-0">
+                <div className="text-sm font-medium text-gray-800 whitespace-pre-line leading-relaxed break-words">
+                  {(() => {
+                    const parsed = parseNotificationText(notification);
+                    if (!parsed || parsed.length === 0) {
+                      return <span>{notification}</span>;
+                    }
+                    return parsed.map((part, index) => {
+                      if (part.type === 'link') {
+                        return (
+                          <a
+                            key={index}
+                            href={part.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 underline font-semibold break-all"
+                          >
+                            {part.content}
+                          </a>
+                        );
+                      }
+                      return <span key={index}>{part.content}</span>;
+                    });
+                  })()}
+                </div>
               </div>
             </div>
           </div>
