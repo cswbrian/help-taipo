@@ -4,6 +4,38 @@ import FilterBar from './components/FilterBar';
 import BottomNav from './components/BottomNav';
 import SourcePage from './components/SourcePage';
 
+// Helper function to find coordinates for a location using partial matching
+function findLocationCoordinates(locationName, coordinatesMap) {
+  if (!locationName || !coordinatesMap) return null;
+  
+  // Try exact match first
+  if (coordinatesMap[locationName]) {
+    return coordinatesMap[locationName];
+  }
+  
+  // Try partial match - check if location name contains any key or vice versa
+  for (const [key, coords] of Object.entries(coordinatesMap)) {
+    if (locationName.includes(key) || key.includes(locationName)) {
+      return coords;
+    }
+  }
+  
+  return null;
+}
+
+// Helper function to calculate distance between two coordinates (Haversine formula)
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // Radius of the Earth in km
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c; // Distance in km
+}
+
 // Helper function to convert text with URLs to clickable links
 function parseNotificationText(text) {
   if (!text) return null;
@@ -50,6 +82,9 @@ function App() {
   const [statusFilter, setStatusFilter] = useState(['‼️ 急需 Urgent', '⚠️ 尚需 Still Need']);
   const [itemFilter, setItemFilter] = useState('all');
   const [categoriesWithItems, setCategoriesWithItems] = useState({});
+  const [locationCoordinates, setLocationCoordinates] = useState({});
+  const [userLocation, setUserLocation] = useState(null);
+  const [sortByDistance, setSortByDistance] = useState(false);
   const [lastUpdate, setLastUpdate] = useState(null);
   const [notification, setNotification] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -58,6 +93,19 @@ function App() {
   useEffect(() => {
     // Use base URL for GitHub Pages compatibility
     const baseUrl = import.meta.env.BASE_URL;
+    
+    // Load location coordinates
+    fetch(`${baseUrl}data/location-coordinates.json`)
+      .then(response => response.json())
+      .then(coordsData => {
+        setLocationCoordinates(coordsData.locations || {});
+      })
+      .catch(err => {
+        console.warn('Failed to load location coordinates:', err);
+        setLocationCoordinates({});
+      });
+    
+    // Load locations data
     fetch(`${baseUrl}data/locations.json`)
       .then(response => {
         if (!response.ok) {
@@ -106,6 +154,27 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
+    
+    // Request user's geolocation
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          });
+        },
+        (error) => {
+          console.warn('Geolocation error:', error);
+          // Don't show error to user, just silently fail
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0
+        }
+      );
+    }
   }, []);
 
   useEffect(() => {
@@ -149,8 +218,34 @@ function App() {
       });
     }
 
+    // Sort by distance if enabled and user location is available
+    if (sortByDistance && userLocation && locationCoordinates) {
+      filtered = filtered.map(location => {
+        const coords = findLocationCoordinates(location.name, locationCoordinates);
+        let distance = null;
+        
+        if (coords && coords.lat && coords.lng) {
+          distance = calculateDistance(
+            userLocation.lat,
+            userLocation.lng,
+            coords.lat,
+            coords.lng
+          );
+        }
+        
+        return { ...location, distance };
+      }).sort((a, b) => {
+        // Locations with coordinates come first, sorted by distance
+        // Locations without coordinates come last
+        if (a.distance === null && b.distance === null) return 0;
+        if (a.distance === null) return 1;
+        if (b.distance === null) return -1;
+        return a.distance - b.distance;
+      });
+    }
+
     setFilteredLocations(filtered);
-  }, [locations, statusFilter, itemFilter]);
+  }, [locations, statusFilter, itemFilter, sortByDistance, userLocation, locationCoordinates]);
 
   if (loading) {
     return (
@@ -194,11 +289,13 @@ function App() {
             <div>
               <h1 className="text-xl font-bold text-gray-900">大埔物資供應總覽</h1>
               {lastUpdate && (
-                <p className="text-sm text-gray-500">
-                  <span className="inline-flex items-center gap-1">
-                    最後更新：{new Date(lastUpdate).toLocaleString('zh-TW')}
-                  </span>
-                </p>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm text-gray-500">
+                    <span className="inline-flex items-center gap-1">
+                      最後更新（約每5分鐘）：{new Date(lastUpdate).toLocaleString('zh-TW')}
+                    </span>
+                  </p>
+                </div>
               )}
             </div>
           </div>
@@ -207,7 +304,7 @@ function App() {
 
       {/* Notification Banner */}
       {notification && (
-        <div className="bg-gradient-to-r from-orange-50 to-amber-50 border-b border-orange-200/50">
+        <div className="bg-gradient-to-r from-red-50 to-rose-50 border-b border-red-200/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-start gap-3">
               <span className="text-2xl shrink-0">📢</span>
@@ -249,6 +346,9 @@ function App() {
           itemFilter={itemFilter}
           onItemFilterChange={setItemFilter}
           categoriesWithItems={categoriesWithItems}
+          sortByDistance={sortByDistance}
+          onSortByDistanceChange={setSortByDistance}
+          userLocation={userLocation}
         />
 
         {filteredLocations.length === 0 ? (
@@ -260,7 +360,13 @@ function App() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredLocations.map((location, index) => (
-              <LocationCard key={index} location={location} statusFilter={statusFilter} />
+              <LocationCard 
+                key={index} 
+                location={location} 
+                statusFilter={statusFilter}
+                coordinates={findLocationCoordinates(location.name, locationCoordinates)}
+                distance={location.distance}
+              />
             ))}
           </div>
         )}

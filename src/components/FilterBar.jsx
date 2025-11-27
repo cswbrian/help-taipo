@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilter, onItemFilterChange, categoriesWithItems }) {
+export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilter, onItemFilterChange, categoriesWithItems, sortByDistance, onSortByDistanceChange, userLocation }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
   
   const statusOptions = [
@@ -135,6 +135,30 @@ export default function FilterBar({ statusFilter, onStatusFilterChange, itemFilt
           </div>
         )}
       </div>
+
+      {/* Distance Sort Toggle */}
+      {userLocation && (
+        <div className="flex flex-col gap-3 pt-3 border-t border-gray-200">
+          <div className="flex items-center justify-between">
+            <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
+              <span>📍</span>
+              按距離排序
+            </label>
+            <button
+              onClick={() => onSortByDistanceChange(!sortByDistance)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                sortByDistance ? 'bg-blue-600' : 'bg-gray-300'
+              }`}
+            >
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                  sortByDistance ? 'translate-x-6' : 'translate-x-1'
+                }`}
+              />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Status Filter */}
       <div className="flex flex-col gap-3 pt-3 border-t border-gray-200">

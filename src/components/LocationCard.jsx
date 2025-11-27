@@ -1,9 +1,21 @@
 import StatusBadge from './StatusBadge';
 
-export default function LocationCard({ location, statusFilter = [] }) {
+export default function LocationCard({ location, statusFilter = [], coordinates = null, distance = null }) {
   if (!location || !location.name) {
     return null;
   }
+
+  const openGoogleMaps = () => {
+    if (coordinates && coordinates.lat && coordinates.lng) {
+      // Encode location name for URL (replace spaces with +)
+      const locationName = location.name ? encodeURIComponent(location.name) : '';
+      // Use format: ?q=name@lat,lng or just ?q=lat,lng if no name
+      const url = locationName 
+        ? `https://www.google.com/maps?q=${locationName}@${coordinates.lat},${coordinates.lng}`
+        : `https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   // Filter items based on statusFilter (now supports array)
   const shouldShowItem = (itemStatus) => {
@@ -26,26 +38,36 @@ export default function LocationCard({ location, statusFilter = [] }) {
     ? location.volunteers.filter(volunteer => shouldShowItem(volunteer.status))
     : [];
 
-  // Show allItems section only if it matches the filter
-  const showAllItems = location.allItems && (
-    !Array.isArray(statusFilter) || 
-    statusFilter.length === 0 || 
-    statusFilter.includes(location.allItems)
-  );
-
   return (
     <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-gray-200/50 hover:border-blue-300/50 hover:-translate-y-1">
       <div className="flex items-center justify-between mb-3 pb-3 border-b-2 border-gradient-to-r from-blue-100 to-transparent">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-1 min-w-0">
           <span className="text-2xl">🏢</span>
-          <h3 className="text-lg font-bold text-gray-900">
-            {location.name}
-          </h3>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-lg font-bold text-gray-900">
+              {location.name}
+            </h3>
+            {distance !== null && (
+              <p className="text-xs text-gray-500 mt-0.5">
+                📍 {distance.toFixed(1)} km
+              </p>
+            )}
+          </div>
         </div>
+        {coordinates && (
+          <button
+            onClick={openGoogleMaps}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold transition-all duration-200 hover:shadow-md ml-2 flex-shrink-0"
+            title="在 Google Maps 中開啟"
+          >
+            <span>📍</span>
+            <span>地圖</span>
+          </button>
+        )}
       </div>
       
-      {/* Overall Status - Prominently displayed first */}
-      {showAllItems && (
+      {/* Overall Status - Always displayed if exists */}
+      {location.allItems && (
         <div className="mb-3 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200/50 shadow-sm">
           <div className="flex items-center gap-2">
             <span className="text-sm font-bold text-gray-800">📦 所有物品 All Items:</span>
