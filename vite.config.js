@@ -10,5 +10,20 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    // Ensure assets have hash for cache busting (Vite does this by default)
+    rollupOptions: {
+      output: {
+        // Add hash to chunk files for cache busting
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
+  },
+  // Server configuration for development
+  server: {
+    headers: {
+      'Cache-Control': 'no-store'
+    }
   }
 })

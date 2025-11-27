@@ -42,9 +42,17 @@ jobs:
           GITHUB_PAGES: 'true'
         run: npm run build
 
+      - name: Add cache-busting to HTML
+        run: |
+          # Add a build timestamp comment to index.html for cache busting
+          BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          sed -i "s|</head>|<!-- Build: $BUILD_TIME -->\n</head>|" dist/index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-
+          cname: false
+          # Force push to ensure cache is cleared
+          force_orphan: false

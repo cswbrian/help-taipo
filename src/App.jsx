@@ -94,8 +94,23 @@ function App() {
     // Use base URL for GitHub Pages compatibility
     const baseUrl = import.meta.env.BASE_URL;
     
-    // Load location coordinates
-    fetch(`${baseUrl}data/location-coordinates.json`)
+    // Create cache-busting query parameter (shared for both fetches)
+    const cacheBuster = new URLSearchParams({
+      v: new Date().toISOString().split('T')[0], // Date-based version
+      t: Date.now() // Timestamp for immediate cache bust
+    }).toString();
+    
+    const fetchOptions = {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    };
+    
+    // Load location coordinates with cache-busting
+    fetch(`${baseUrl}data/location-coordinates.json?${cacheBuster}`, fetchOptions)
       .then(response => response.json())
       .then(coordsData => {
         setLocationCoordinates(coordsData.locations || {});
@@ -105,8 +120,8 @@ function App() {
         setLocationCoordinates({});
       });
     
-    // Load locations data
-    fetch(`${baseUrl}data/locations.json`)
+    // Load locations data with cache-busting
+    fetch(`${baseUrl}data/locations.json?${cacheBuster}`, fetchOptions)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load data');
