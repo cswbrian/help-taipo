@@ -1,0 +1,915 @@
+{
+  "lastUpdate": "2025-11-27T16:34:49.021Z",
+  "locations": [
+    {
+      "name": "彩虹串燒",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "拖鞋 Sandal",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "學生襪",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "大人衣物",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "求生氈",
+              "status": "‼️ 急需 Urgent"
+            },
+            {
+              "name": "反光錫紙",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "照明用品（乾電）",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "枕頭",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "衛生用品",
+          "items": [
+            {
+              "name": "75%支裝酒精",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "其他 Others",
+          "items": [
+            {
+              "name": "紅白藍膠袋",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "🤨 無資料 No Data"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "🤨 無資料 No Data"
+        }
+      ]
+    },
+    {
+      "name": "大埔藝術中心",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "社工 social worker",
+              "status": "🤨 無資料 No Data"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "⚠️ 尚需 Still Need"
+        },
+        {
+          "type": "社工 social worker",
+          "status": "🤨 無資料 No Data"
+        }
+      ]
+    },
+    {
+      "name": "大埔文娛中心",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "糧食&水",
+          "items": [
+            {
+              "name": "能量啫喱",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "（細支裝為主）沐浴露 body wash",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "衛生用品",
+          "items": [
+            {
+              "name": "濕紙巾",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "🤨 無資料 No Data"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "🤨 無資料 No Data"
+        }
+      ]
+    },
+    {
+      "name": "風火堂 （1912）",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "大人衣物",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "被",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "🤨 無資料 No Data"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "🤨 無資料 No Data"
+        }
+      ]
+    },
+    {
+      "name": "東昌街體育館 （1933）",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "保暖內衣",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "⚠️ 尚需 Still Need"
+        }
+      ]
+    },
+    {
+      "name": "富善邨 社區會堂",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "🤨 無資料 No Data"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "✅ 充足 Enough"
+        }
+      ]
+    },
+    {
+      "name": "策誠軒",
+      "allItems": "✅ 充足 Enough",
+      "categories": []
+    },
+    {
+      "name": "廣福商場 平台 （1856）",
+      "allItems": "⚠️ 尚需 Still Need",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "保暖內衣",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "（細支裝為主）沐浴露 body wash",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "摺凳 Chair",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "床墊 Mattress",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "枕頭",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "被",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "醫護人員 medic",
+              "status": "🤨 無資料 No Data"
+            },
+            {
+              "name": "社工 social worker",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "醫護人員 medic",
+          "status": "🤨 無資料 No Data"
+        },
+        {
+          "type": "社工 social worker",
+          "status": "⚠️ 尚需 Still Need"
+        }
+      ]
+    },
+    {
+      "name": "廣福社區會堂 （1919）",
+      "allItems": null,
+      "categories": [
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "‼️ 急需 Urgent"
+            },
+            {
+              "name": "社工 social worker",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "車手 driver",
+              "status": "‼️ 急需 Urgent"
+            },
+            {
+              "name": "心理輔導員 psychological counselor",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "‼️ 急需 Urgent"
+        },
+        {
+          "type": "社工 social worker",
+          "status": "⚠️ 尚需 Still Need"
+        },
+        {
+          "type": "車手 driver",
+          "status": "‼️ 急需 Urgent"
+        },
+        {
+          "type": "心理輔導員 psychological counselor",
+          "status": "‼️ 急需 Urgent"
+        }
+      ]
+    },
+    {
+      "name": "大埔社區中心",
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "床墊 Mattress",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "馮梁結紀念中學",
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "categories": []
+    },
+    {
+      "name": "那打素醫院（已清場）",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "✅ 充足 Enough"
+        }
+      ]
+    },
+    {
+      "name": "大埔墟街市",
+      "allItems": null,
+      "categories": []
+    },
+    {
+      "name": "大埔消防局",
+      "allItems": null,
+      "categories": []
+    },
+    {
+      "name": "運頭塘社區中心",
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "categories": [
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "床墊 Mattress",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "逸東餃子",
+      "allItems": "✅ 充足 Enough",
+      "categories": []
+    },
+    {
+      "name": "大元邨 銘恩小學",
+      "allItems": null,
+      "categories": []
+    },
+    {
+      "name": "元洲仔公園 (1900)",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "求生氈",
+              "status": "‼️ 急需 Urgent"
+            },
+            {
+              "name": "反光錫紙",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "糧食&水",
+          "items": [
+            {
+              "name": "熱水 hot water (連紙杯）",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "(大)毛巾 towel",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "新達廣場 （1856）",
+      "allItems": "🤨 無資料 No Data",
+      "categories": [
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "求生氈",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "摺凳 Chair",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "照明用品（乾電）",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "寵物用品",
+          "items": [
+            {
+              "name": "貓狗罐頭",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "貓狗乾糧",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "寵物衣服、保暖用物品",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "藥品",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "香港中華基督教青年會小西灣會所",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "（細支裝為主）洗頭水 Shampoo",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "（細支裝為主）沐浴露 body wash",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "番梘",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "衛生用品",
+          "items": [
+            {
+              "name": "女性用品",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "其他 Others",
+          "items": [
+            {
+              "name": "文具 （粗marker、膠紙、界刀）",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "大埔墟收集站B出口",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "其他 Others",
+          "items": [
+            {
+              "name": "大聲公",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "銘恩中心",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
+    },
+    {
+      "name": "善導會 善樓 大埔船灣陳屋168號（19：17）",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "拖鞋 Sandal",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "床墊 Mattress",
+              "status": "‼️ 急需 Urgent"
+            }
+          ]
+        },
+        {
+          "name": "BB用品",
+          "items": [
+            {
+              "name": "奶樽",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "奶粉",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "尿片",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "暫停接收物資（現場提供）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "廣福中石化油站",
+      "allItems": "✅ 充足 Enough",
+      "categories": [
+        {
+          "name": "保暖用品",
+          "items": [
+            {
+              "name": "反光錫紙",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "糧食&水",
+          "items": [
+            {
+              "name": "熱水 hot water (連紙杯）",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "水",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "能量啫喱",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "照明用品（乾電）",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "衛生用品",
+          "items": [
+            {
+              "name": "75%支裝酒精",
+              "status": "✅ 充足 Enough"
+            },
+            {
+              "name": "濕紙巾",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "人手",
+          "items": [
+            {
+              "name": "一般義工 General volunteers",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        }
+      ],
+      "volunteers": [
+        {
+          "type": "一般義工 General volunteers",
+          "status": "✅ 充足 Enough"
+        }
+      ]
+    },
+    {
+      "name": "中大",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
+    },
+    {
+      "name": "廣福巴士站",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
+    },
+    {
+      "name": "烏溪沙",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
+    },
+    {
+      "name": "大埔A1 出口",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "拖鞋 Sandal",
+              "status": "暫停接收物資（現場提供）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "廣福球場巴士站",
+      "allItems": null,
+      "categories": [
+        {
+          "name": "糧食&水",
+          "items": [
+            {
+              "name": "水",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "麵包(獨立包裝)",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "東昌街社區會堂 2150 長內留宿長者急需眼罩、耳塞\n相信其他社區會堂同樣需要",
+      "allItems": null,
+      "categories": [
+        {
+          "name": "寢室用品",
+          "items": [
+            {
+              "name": "眼罩",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "耳塞",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "匡智會",
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
+    }
+  ]
+}
