@@ -173,8 +173,12 @@ for (let rowIndex = 8; rowIndex < lines.length; rowIndex++) {
   locations.push(location);
 }
 
+// Extract notification from cell B2 (row index 1, column index 1)
+const notification = lines[1] && lines[1][1] ? lines[1][1].trim() : null;
+
 const output = {
   lastUpdate: new Date().toISOString(),
+  notification: notification,
   locations: locations
 };
 

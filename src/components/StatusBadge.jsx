@@ -43,8 +43,8 @@ export default function StatusBadge({ status }) {
   }
 
   return (
-    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${config.bg} ${config.text}`}>
-      <span className="mr-1">{config.emoji}</span>
+    <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold shadow-sm border ${config.bg} ${config.text} border-opacity-20`}>
+      <span className="mr-1.5 text-base">{config.emoji}</span>
       <span className="truncate max-w-[200px]">{status}</span>
     </span>
   );
