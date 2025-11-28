@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-11-28T06:42:39.489Z",
+  "lastUpdate": "2025-11-28T06:58:23.937Z",
   "notification": "1423 更新：所有地方停收物資，物資已足夠爆滿。區外人唔好再入區，太多人\n無嘢做喺附近嘅義工可去元州仔搬物資上平台。source 銀河系哨兵頻道 https://t.me/universalsentinelsinblack/75699",
   "locations": [
     {
@@ -133,7 +133,7 @@
     },
     {
       "name": "大埔文娛中心",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -203,7 +203,7 @@
     },
     {
       "name": "風火堂",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -242,7 +242,7 @@
     },
     {
       "name": "東昌街體育館",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -281,7 +281,7 @@
     },
     {
       "name": "富善邨 社區會堂",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -311,11 +311,15 @@
     },
     {
       "name": "策誠軒",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
           "items": [
+            {
+              "name": "一般衣物",
+              "status": "⚠️ 尚需 Still Need"
+            },
             {
               "name": "紙底褲 paper bottoms",
               "status": "✅ 充足 Enough"
@@ -348,7 +352,7 @@
     },
     {
       "name": "廣福商場 平台",
-      "allItems": "⚠️ 尚需 Still Need",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -470,7 +474,7 @@
     },
     {
       "name": "大埔社區中心",
-      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -494,12 +498,12 @@
     },
     {
       "name": "馮梁結紀念中學",
-      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "allItems": null,
       "categories": []
     },
     {
       "name": "那打素醫院（已清場）",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "人手",
@@ -530,7 +534,7 @@
     },
     {
       "name": "運頭塘社區中心",
-      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
+      "allItems": null,
       "categories": [
         {
           "name": "寢室用品",
@@ -545,7 +549,7 @@
     },
     {
       "name": "逸東餃子",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": []
     },
     {
@@ -555,7 +559,7 @@
     },
     {
       "name": "元洲仔公園 (1432)",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": [
         {
           "name": "保暖用品",
@@ -607,7 +611,7 @@
     },
     {
       "name": "新達廣場",
-      "allItems": "🤨 無資料 No Data",
+      "allItems": null,
       "categories": [
         {
           "name": "保暖用品",
@@ -661,7 +665,7 @@
     },
     {
       "name": "香港中華基督教青年會小西灣會所",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "梳洗用品",
@@ -715,7 +719,7 @@
     },
     {
       "name": "大埔墟收集站B出口",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": [
         {
           "name": "電器",
@@ -743,12 +747,12 @@
     },
     {
       "name": "銘恩中心",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": []
     },
     {
       "name": "善導會 善樓 大埔船灣陳屋168號（19：17）",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -811,7 +815,7 @@
     },
     {
       "name": "廣福中石化油站",
-      "allItems": "✅ 充足 Enough",
+      "allItems": null,
       "categories": [
         {
           "name": "保暖用品",
@@ -888,22 +892,22 @@
     },
     {
       "name": "中大",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": []
     },
     {
       "name": "廣福巴士站",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": []
     },
     {
       "name": "烏溪沙",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": []
     },
     {
       "name": "大埔A1 出口",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": [
         {
           "name": "衣物",
@@ -956,7 +960,7 @@
     },
     {
       "name": "匡智會",
-      "allItems": "暫停接收物資（現場提供）",
+      "allItems": null,
       "categories": []
     }
   ]
