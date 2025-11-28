@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-11-28T05:41:35.677Z",
+  "lastUpdate": "2025-11-28T05:51:30.246Z",
   "notification": "2315 更新：所有地方。停收物資。區外人唔好再入區\n如有多餘物資請送到彩虹串燒作分流。source 銀河系哨兵頻道 https://t.me/universalsentinelsinblack/75684",
   "locations": [
     {
@@ -312,7 +312,39 @@
     {
       "name": "策誠軒",
       "allItems": "✅ 充足 Enough",
-      "categories": []
+      "categories": [
+        {
+          "name": "衣物",
+          "items": [
+            {
+              "name": "紙底褲 paper bottoms",
+              "status": "✅ 充足 Enough"
+            }
+          ]
+        },
+        {
+          "name": "梳洗用品",
+          "items": [
+            {
+              "name": "(大)毛巾 towel",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        },
+        {
+          "name": "電器",
+          "items": [
+            {
+              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
+              "status": "⚠️ 尚需 Still Need"
+            },
+            {
+              "name": "差電線 Power Cable",
+              "status": "⚠️ 尚需 Still Need"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "廣福商場 平台 （1856）",
