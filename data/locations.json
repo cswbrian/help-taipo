@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-11-28T08:30:09.550Z",
+  "lastUpdate": "2025-11-28T08:52:30.770Z",
   "notification": "1423 更新：所有地方停收物資，物資已足夠爆滿。區外人唔好再入區，太多人\n無嘢做喺附近嘅義工可去元州仔搬物資上平台。source 銀河系哨兵頻道 https://t.me/universalsentinelsinblack/75699",
   "locations": [
     {
@@ -78,10 +78,6 @@
         }
       ],
       "volunteers": [
-        {
-          "type": "一般義工 General volunteers",
-          "status": "⚠️ 尚需 Still Need"
-        },
         {
           "type": "社工 social worker",
           "status": "🤨 無資料 No Data"
