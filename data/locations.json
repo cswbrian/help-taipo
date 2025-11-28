@@ -1,32 +1,11 @@
 {
-  "lastUpdate": "2025-11-28T06:58:23.937Z",
+  "lastUpdate": "2025-11-28T07:24:48.326Z",
   "notification": "1423 更新：所有地方停收物資，物資已足夠爆滿。區外人唔好再入區，太多人\n無嘢做喺附近嘅義工可去元州仔搬物資上平台。source 銀河系哨兵頻道 https://t.me/universalsentinelsinblack/75699",
   "locations": [
     {
       "name": "彩虹串燒",
       "allItems": null,
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "✅ 充足 Enough"
-            },
-            {
-              "name": "拖鞋 Sandal",
-              "status": "⚠️ 尚需 Still Need"
-            },
-            {
-              "name": "學生襪",
-              "status": "⚠️ 尚需 Still Need"
-            },
-            {
-              "name": "大人衣物",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
         {
           "name": "保暖用品",
           "items": [
@@ -75,21 +54,12 @@
               "status": "⚠️ 尚需 Still Need"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "🤨 無資料 No Data"
-            }
-          ]
         }
       ],
       "volunteers": [
         {
           "type": "一般義工 General volunteers",
-          "status": "🤨 無資料 No Data"
+          "status": "⚠️ 尚需 Still Need"
         }
       ]
     },
@@ -98,21 +68,8 @@
       "allItems": null,
       "categories": [
         {
-          "name": "衣物",
+          "name": "各位，因現場比起物資更需要專業義工，故我將人手分類放到最前",
           "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "⚠️ 尚需 Still Need"
-            },
             {
               "name": "社工 social worker",
               "status": "🤨 無資料 No Data"
@@ -133,17 +90,8 @@
     },
     {
       "name": "大埔文娛中心",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "✅ 充足 Enough"
-            }
-          ]
-        },
         {
           "name": "糧食&水",
           "items": [
@@ -183,15 +131,6 @@
               "status": "✅ 充足 Enough"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "🤨 無資料 No Data"
-            }
-          ]
         }
       ],
       "volunteers": [
@@ -203,32 +142,14 @@
     },
     {
       "name": "風火堂",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "大人衣物",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
         {
           "name": "寢室用品",
           "items": [
             {
               "name": "被",
               "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "🤨 無資料 No Data"
             }
           ]
         }
@@ -242,31 +163,13 @@
     },
     {
       "name": "東昌街體育館",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "✅ 充足 Enough"
-            }
-          ]
-        },
         {
           "name": "保暖用品",
           "items": [
             {
               "name": "保暖內衣",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
               "status": "⚠️ 尚需 Still Need"
             }
           ]
@@ -281,27 +184,8 @@
     },
     {
       "name": "富善邨 社區會堂",
-      "allItems": null,
-      "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "🤨 無資料 No Data"
-            }
-          ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "✅ 充足 Enough"
-            }
-          ]
-        }
-      ],
+      "allItems": "✅ 充足 Enough",
+      "categories": [],
       "volunteers": [
         {
           "type": "一般義工 General volunteers",
@@ -311,21 +195,8 @@
     },
     {
       "name": "策誠軒",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "一般衣物",
-              "status": "⚠️ 尚需 Still Need"
-            },
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "✅ 充足 Enough"
-            }
-          ]
-        },
         {
           "name": "梳洗用品",
           "items": [
@@ -352,14 +223,18 @@
     },
     {
       "name": "廣福商場 平台",
-      "allItems": null,
+      "allItems": "⚠️ 尚需 Still Need",
       "categories": [
         {
-          "name": "衣物",
+          "name": "各位，因現場比起物資更需要專業義工，故我將人手分類放到最前",
           "items": [
             {
-              "name": "紙底褲 paper bottoms",
-              "status": "✅ 充足 Enough"
+              "name": "醫護人員 medic",
+              "status": "🤨 無資料 No Data"
+            },
+            {
+              "name": "社工 social worker",
+              "status": "⚠️ 尚需 Still Need"
             }
           ]
         },
@@ -401,19 +276,6 @@
               "status": "⚠️ 尚需 Still Need"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "醫護人員 medic",
-              "status": "🤨 無資料 No Data"
-            },
-            {
-              "name": "社工 social worker",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
         }
       ],
       "volunteers": [
@@ -432,12 +294,8 @@
       "allItems": null,
       "categories": [
         {
-          "name": "人手",
+          "name": "各位，因現場比起物資更需要專業義工，故我將人手分類放到最前",
           "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "‼️ 急需 Urgent"
-            },
             {
               "name": "社工 social worker",
               "status": "⚠️ 尚需 Still Need"
@@ -474,17 +332,8 @@
     },
     {
       "name": "大埔社區中心",
-      "allItems": null,
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "紙底褲 paper bottoms",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
         {
           "name": "寢室用品",
           "items": [
@@ -498,23 +347,13 @@
     },
     {
       "name": "馮梁結紀念中學",
-      "allItems": null,
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
       "categories": []
     },
     {
       "name": "那打素醫院（已清場）",
-      "allItems": null,
-      "categories": [
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "✅ 充足 Enough"
-            }
-          ]
-        }
-      ],
+      "allItems": "✅ 充足 Enough",
+      "categories": [],
       "volunteers": [
         {
           "type": "一般義工 General volunteers",
@@ -534,7 +373,7 @@
     },
     {
       "name": "運頭塘社區中心",
-      "allItems": null,
+      "allItems": "🙅🏻 政府已接手 不需義工物資 Gov has taken control",
       "categories": [
         {
           "name": "寢室用品",
@@ -549,7 +388,7 @@
     },
     {
       "name": "逸東餃子",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": []
     },
     {
@@ -559,7 +398,7 @@
     },
     {
       "name": "元洲仔公園 (1432)",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": [
         {
           "name": "保暖用品",
@@ -591,15 +430,6 @@
               "status": "‼️ 急需 Urgent"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
         }
       ],
       "volunteers": [
@@ -611,7 +441,7 @@
     },
     {
       "name": "新達廣場",
-      "allItems": null,
+      "allItems": "🤨 無資料 No Data",
       "categories": [
         {
           "name": "保暖用品",
@@ -665,7 +495,7 @@
     },
     {
       "name": "香港中華基督教青年會小西灣會所",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": [
         {
           "name": "梳洗用品",
@@ -719,7 +549,7 @@
     },
     {
       "name": "大埔墟收集站B出口",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": [
         {
           "name": "電器",
@@ -747,22 +577,13 @@
     },
     {
       "name": "銘恩中心",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": []
     },
     {
       "name": "善導會 善樓 大埔船灣陳屋168號（19：17）",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "拖鞋 Sandal",
-              "status": "‼️ 急需 Urgent"
-            }
-          ]
-        },
         {
           "name": "電器",
           "items": [
@@ -801,21 +622,12 @@
               "status": "⚠️ 尚需 Still Need"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "暫停接收物資（現場提供）"
-            }
-          ]
         }
       ]
     },
     {
       "name": "廣福中石化油站",
-      "allItems": null,
+      "allItems": "✅ 充足 Enough",
       "categories": [
         {
           "name": "保暖用品",
@@ -872,15 +684,6 @@
               "status": "✅ 充足 Enough"
             }
           ]
-        },
-        {
-          "name": "人手",
-          "items": [
-            {
-              "name": "一般義工 General volunteers",
-              "status": "✅ 充足 Enough"
-            }
-          ]
         }
       ],
       "volunteers": [
@@ -892,33 +695,23 @@
     },
     {
       "name": "中大",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": []
     },
     {
       "name": "廣福巴士站",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": []
     },
     {
       "name": "烏溪沙",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": []
     },
     {
       "name": "大埔A1 出口",
-      "allItems": null,
-      "categories": [
-        {
-          "name": "衣物",
-          "items": [
-            {
-              "name": "拖鞋 Sandal",
-              "status": "暫停接收物資（現場提供）"
-            }
-          ]
-        }
-      ]
+      "allItems": "暫停接收物資（現場提供）",
+      "categories": []
     },
     {
       "name": "廣福球場巴士站",
@@ -960,7 +753,7 @@
     },
     {
       "name": "匡智會",
-      "allItems": null,
+      "allItems": "暫停接收物資（現場提供）",
       "categories": []
     }
   ]
