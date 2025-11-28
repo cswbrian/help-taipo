@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2025-11-28T07:57:04.806Z",
+  "lastUpdate": "2025-11-28T08:30:09.550Z",
   "notification": "1423 更新：所有地方停收物資，物資已足夠爆滿。區外人唔好再入區，太多人\n無嘢做喺附近嘅義工可去元州仔搬物資上平台。source 銀河系哨兵頻道 https://t.me/universalsentinelsinblack/75699",
   "locations": [
     {
@@ -202,19 +202,6 @@
           "items": [
             {
               "name": "(大)毛巾 towel",
-              "status": "⚠️ 尚需 Still Need"
-            }
-          ]
-        },
-        {
-          "name": "電器",
-          "items": [
-            {
-              "name": "尿袋/差電器/插蘇 Power Bank、Charger",
-              "status": "⚠️ 尚需 Still Need"
-            },
-            {
-              "name": "差電線 Power Cable",
               "status": "⚠️ 尚需 Still Need"
             }
           ]
